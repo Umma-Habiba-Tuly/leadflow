@@ -17,7 +17,7 @@ services:
     build: ./backend
     env_file: .env
     environment:
-      DATABASE_URL: postgresql://leadflow:leadflow@db:5432/leadflow
+      DATABASE_URL: postgresql+psycopg2://leadflow:leadflow@db:5432/leadflow
     ports:
       - "8000:8000"
     depends_on:
