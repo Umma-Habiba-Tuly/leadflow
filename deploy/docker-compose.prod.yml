@@ -1,11 +1,17 @@
-# Production stack: Caddy (HTTPS) -> web (Next.js) / api (FastAPI) -> db (Postgres).
-# Only Caddy publishes ports. The database and the API are never reachable from the internet.
+# LeadFlow production stack for a server that ALREADY has a reverse proxy (Caddy) on ports 80/443.
+#   web -> Next.js, api -> FastAPI, db -> Postgres (private, no published port).
+# web and api are published only on the Docker bridge address (EDGE_BIND, default 172.16.0.1), so the
+# existing Caddy can reach them via host.docker.internal but the internet cannot.
 #
-# Run from the repo root:  docker compose --env-file deploy/.env.production -f deploy/docker-compose.prod.yml up -d --build
+# Run from the repo root:
+#   docker compose --env-file deploy/.env.production -f deploy/docker-compose.prod.yml up -d --build
+name: leadflow
+
 services:
   db:
     image: postgres:16
     restart: unless-stopped
+    mem_limit: 400m
     environment:
       POSTGRES_USER: leadflow
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
@@ -21,6 +27,9 @@ services:
   api:
     build: ../backend
     restart: unless-stopped
+    mem_limit: 400m
+    ports:
+      - "${EDGE_BIND:-172.16.0.1}:8100:8000"
     environment:
       DATABASE_URL: postgresql://leadflow:${POSTGRES_PASSWORD}@db:5432/leadflow
       SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY}
@@ -36,28 +45,13 @@ services:
   web:
     build: ../frontend
     restart: unless-stopped
+    mem_limit: 600m
+    ports:
+      - "${EDGE_BIND:-172.16.0.1}:3100:3000"
     environment:
       BACKEND_URL: http://api:8000
     depends_on:
       - api
 
-  caddy:
-    image: caddy:2
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    environment:
-      APP_DOMAIN: ${APP_DOMAIN}
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-    depends_on:
-      - web
-      - api
-
 volumes:
   pgdata:
-  caddy_data:
-  caddy_config:

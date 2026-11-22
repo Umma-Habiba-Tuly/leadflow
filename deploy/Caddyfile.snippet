@@ -1,0 +1,13 @@
+# Add this block to the Caddyfile of the Caddy that already serves your other sites, then reload it.
+# (Caddy gets and renews the HTTPS certificate itself once the DNS A record for the name points here.)
+app.atsync.tech {
+    # Unsubscribe pages are served by the API: the link inside every email points here.
+    handle /u/* {
+        reverse_proxy host.docker.internal:8100
+    }
+    # Everything else is the web app. The API itself (and /docs) is not exposed.
+    handle {
+        reverse_proxy host.docker.internal:3100
+    }
+    encode gzip
+}
