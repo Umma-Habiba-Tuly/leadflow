@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Circuit Teal, brand kit v1 (locked). The five values below are copied exactly from the kit. */
+:root {
+  --brand-base: #0E2E2B;
+  --brand-primary: #10847E;
+  --brand-accent: #B7E85A;
+  --brand-surface: #EFFAF6;
+  --brand-ink: #10201D;
+  /* Derived, not part of the kit: Surface lightened 55% toward white. A near-white page with a faint
+     mint cast, so white cards and 1px borders carry the structure (the plain look of vercel.com). */
+  --brand-page: color-mix(in srgb, white 55%, var(--brand-surface));
+  color-scheme: light;
+}
+
+/* Utilities such as bg-brand-ink / text-brand-ink/65 / border-brand-base/12.
+   (Named brand-*, not just "base": Tailwind already uses text-base for font size.) */
+@theme inline {
+  --color-brand-base: var(--brand-base);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-page: var(--brand-page);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--brand-page);
+  color: var(--brand-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings: light-ish weight, tight tracking, balanced wrapping. Plain, not shouty. */
+h1 { font-weight: 450; letter-spacing: -0.03em; }
+h1, h2, h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+p, li { text-wrap: pretty; }

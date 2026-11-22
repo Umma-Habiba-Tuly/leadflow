@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "timestamp": "20261121-162510",
+    "model": "gemini-3.1-flash-lite",
+    "repeat": 2,
+    "label": "baseline: first measurement",
+    "dataset_hash": "76b7a9f6",
+    "prompt_hash": "6b1ce54c"
+  },
+  "metrics": {
+    "n_cases": 30,
+    "n_scored": 29,
+    "bucket_accuracy": 0.7586206896551724,
+    "majority_baseline": 0.41379310344827586,
+    "pairwise_accuracy": 0.9416058394160584,
+    "spearman": 0.8806167078558614,
+    "confusion": {
+      "poor": {
+        "poor": 12,
+        "maybe": 0,
+        "good": 0
+      },
+      "maybe": {
+        "poor": 1,
+        "maybe": 0,
+        "good": 6
+      },
+      "good": {
+        "poor": 0,
+        "maybe": 0,
+        "good": 10
+      }
+    },
+    "stability": {
+      "mean_score_spread": 0.0,
+      "bucket_flip_rate": 0.0
+    }
+  },
+  "severe_errors": [],
+  "per_case": [
+    {
+      "id": "dent-01",
+      "label": "good",
+      "scores": [
+        85,
+        85
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX, which perfectly matches the target niche and location. Their moderate Google rating suggests they could benefit significantly from a website redesign and improved local SEO to attract more patients."
+    },
+    {
+      "id": "dent-02",
+      "label": "good",
+      "scores": [
+        90,
+        90
+      ],
+      "reason": "This business is a dental specialist located in the target city with an existing website and a solid review base, making them an ideal candidate for website redesign and local SEO services."
+    },
+    {
+      "id": "dent-03",
+      "label": "good",
+      "scores": [
+        85,
+        85
+      ],
+      "reason": "This is a dental clinic located in the target city of Austin, TX. Their low review count suggests they could benefit significantly from local SEO and a website redesign to improve their online presence and patient acquisition."
+    },
+    {
+      "id": "dent-04",
+      "label": "good",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX, which perfectly matches the target niche and location. They have an existing website and a solid review presence, making them an ideal candidate for redesign and SEO services."
+    },
+    {
+      "id": "dent-05",
+      "label": "maybe",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "This business is a perfect match as it is a dental clinic located in Austin, TX. With a high review count and an existing website, they are an ideal candidate for professional SEO and redesign services to further increase patient bookings."
+    },
+    {
+      "id": "dent-06",
+      "label": "maybe",
+      "scores": [
+        85,
+        85
+      ],
+      "reason": "The business is a dental clinic located in the target city of Austin, TX, and has a website, making it a strong candidate for a redesign and SEO services."
+    },
+    {
+      "id": "dent-07",
+      "label": "maybe",
+      "scores": [
+        85,
+        85
+      ],
+      "reason": "The business is a dental clinic in the target location of Austin, TX. Their low Google rating of 3.2 suggests they could significantly benefit from a website redesign and local SEO to improve their online reputation and attract more patients."
+    },
+    {
+      "id": "dent-08",
+      "label": "poor",
+      "scores": [
+        0,
+        0
+      ],
+      "reason": "The business is an auto repair shop, not a dental clinic, so it does not match the target niche for the offer."
+    },
+    {
+      "id": "dent-09",
+      "label": "poor",
+      "scores": [
+        10,
+        10
+      ],
+      "reason": "The business is a veterinary clinic, not a human dental clinic, making it a poor fit for the offer."
+    },
+    {
+      "id": "dent-10",
+      "label": "poor",
+      "scores": [
+        20,
+        20
+      ],
+      "reason": "The business is located in Dallas, TX, which is outside the target location of Austin, TX. While it is a dental clinic, the geographic mismatch makes it a poor prospect."
+    },
+    {
+      "id": "dent-11",
+      "label": "poor",
+      "scores": [
+        20,
+        null
+      ],
+      "reason": "The business is a dental laboratory, not a dental clinic that treats patients. Therefore, they are not a fit for a service focused on new-patient bookings."
+    },
+    {
+      "id": "dent-12",
+      "label": "poor",
+      "scores": [
+        0,
+        0
+      ],
+      "reason": "The business is a plumbing company, not a dental clinic, making it a poor fit for the offer."
+    },
+    {
+      "id": "rest-01",
+      "label": "good",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a restaurant in Austin, TX with a Google rating of 3.4, which perfectly matches the target criteria for reputation management services."
+    },
+    {
+      "id": "rest-02",
+      "label": "good",
+      "scores": [
+        100,
+        100
+      ],
+      "reason": "The business is a restaurant in Austin with a 3.1 rating, which perfectly matches the criteria for reputation management services. They have a sufficient number of reviews to warrant professional assistance."
+    },
+    {
+      "id": "rest-03",
+      "label": "good",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a restaurant in Austin with a 3.8 rating, which perfectly matches the criteria for reputation management services. Contact information is available, making them a strong lead."
+    },
+    {
+      "id": "rest-04",
+      "label": "good",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a restaurant in Austin with a 3.9 rating, which perfectly matches the criteria for the reputation management offer. They have a reachable contact email and a sufficient number of reviews to warrant service."
+    },
+    {
+      "id": "rest-05",
+      "label": "maybe",
+      "scores": [
+        30,
+        30
+      ],
+      "reason": "The business is a restaurant in Austin, but its Google rating of 4.2 exceeds the target threshold of 4.0, making it a poor fit for the offer."
+    },
+    {
+      "id": "rest-06",
+      "label": "maybe",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a restaurant in Austin, TX with a Google rating of 3.5, which perfectly matches the target criteria for reputation management services."
+    },
+    {
+      "id": "rest-07",
+      "label": "poor",
+      "scores": [
+        10,
+        10
+      ],
+      "reason": "The business is a restaurant in Austin, but their Google rating of 4.7 exceeds the target threshold of 4.0, making them a poor fit for this specific service."
+    },
+    {
+      "id": "rest-08",
+      "label": "poor",
+      "scores": [
+        0,
+        0
+      ],
+      "reason": "The business is a plumbing company, not a restaurant, so it does not fit the target niche for this offer."
+    },
+    {
+      "id": "rest-09",
+      "label": "poor",
+      "scores": [
+        0,
+        0
+      ],
+      "reason": "The business is located in Houston, TX, which falls outside the target location of Austin, TX."
+    },
+    {
+      "id": "rest-10",
+      "label": "poor",
+      "scores": [
+        20,
+        20
+      ],
+      "reason": "The business is a restaurant in Austin, but its Google rating of 4.8 exceeds the target threshold of 4.0, making it a poor fit for reputation management services."
+    },
+    {
+      "id": "free-01",
+      "label": "good",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a design studio located in the United States, which perfectly matches the target niche and location for the bookkeeping and tax prep services."
+    },
+    {
+      "id": "free-02",
+      "label": "good",
+      "scores": [
+        null,
+        95
+      ],
+      "reason": ""
+    },
+    {
+      "id": "free-03",
+      "label": "good",
+      "scores": [
+        95,
+        95
+      ],
+      "reason": "The business is a solo brand designer based in the United States, which perfectly matches the target niche and offer. The presence of a website and contact email makes them highly reachable."
+    },
+    {
+      "id": "free-04",
+      "label": "maybe",
+      "scores": [
+        85,
+        85
+      ],
+      "reason": "Studio North is located in the US and appears to be a small design studio, which aligns perfectly with the target niche of one-person design studios. The presence of a website and contact email makes them a strong prospect."
+    },
+    {
+      "id": "free-05",
+      "label": "maybe",
+      "scores": [
+        85,
+        85
+      ],
+      "reason": "Brand Lab is located in the US and appears to be a design studio, which aligns perfectly with the target niche. The high rating and active presence suggest a professional business that likely needs bookkeeping services."
+    },
+    {
+      "id": "free-06",
+      "label": "poor",
+      "scores": [
+        20,
+        20
+      ],
+      "reason": "The business is a large agency with 50 designers, which falls outside the target niche of solo freelancers and one-person design studios."
+    },
+    {
+      "id": "free-07",
+      "label": "poor",
+      "scores": [
+        0,
+        0
+      ],
+      "reason": "The business is a pizza restaurant, which does not match the target niche of freelance graphic designers."
+    },
+    {
+      "id": "free-08",
+      "label": "poor",
+      "scores": [
+        10,
+        10
+      ],
+      "reason": "The business is a large corporation with 300 staff, which does not fit the target niche of solo freelancers and one-person design studios."
+    }
+  ],
+  "errors": [
+    {
+      "id": "free-02",
+      "run": 1,
+      "error": "Could not reach Gemini: ReadTimeout"
+    },
+    {
+      "id": "dent-11",
+      "run": 2,
+      "error": "Could not reach Gemini: ReadTimeout"
+    }
+  ]
+}

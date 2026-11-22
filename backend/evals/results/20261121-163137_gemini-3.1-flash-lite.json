@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "timestamp": "20261121-163137",
+    "model": "gemini-3.1-flash-lite",
+    "repeat": 1,
+    "label": "v1 prompt (holdout)",
+    "dataset_hash": "40f1f178",
+    "prompt_hash": "6b1ce54c"
+  },
+  "metrics": {
+    "n_cases": 20,
+    "n_scored": 20,
+    "bucket_accuracy": 0.65,
+    "majority_baseline": 0.35,
+    "pairwise_accuracy": 0.8721804511278195,
+    "pairwise_by_tier": {
+      "good>maybe": 0.7755102040816326,
+      "maybe>poor": 0.8571428571428571,
+      "good>poor": 1.0
+    },
+    "spearman": 0.7710235802978503,
+    "confusion": {
+      "poor": {
+        "poor": 4,
+        "maybe": 2,
+        "good": 0
+      },
+      "maybe": {
+        "poor": 2,
+        "maybe": 2,
+        "good": 3
+      },
+      "good": {
+        "poor": 0,
+        "maybe": 0,
+        "good": 7
+      }
+    },
+    "stability": null
+  },
+  "severe_errors": [],
+  "per_case": [
+    {
+      "id": "h-dent-01",
+      "label": "good",
+      "scores": [
+        85
+      ],
+      "reason": "The business is a dental clinic in the target location of Austin, TX. Their 3.9 rating suggests they could benefit from a website redesign and local SEO to improve their online reputation and attract more new patients."
+    },
+    {
+      "id": "h-dent-02",
+      "label": "good",
+      "scores": [
+        85
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX, which perfectly matches the target niche and location. Their moderate Google rating suggests they could benefit from improved local SEO and a website redesign to attract more patients."
+    },
+    {
+      "id": "h-dent-03",
+      "label": "maybe",
+      "scores": [
+        95
+      ],
+      "reason": "This business is a perfect match as it is a dental clinic located in Austin, TX. With a strong online presence and high review count, they are an ideal candidate for website and SEO optimization to further increase patient bookings."
+    },
+    {
+      "id": "h-dent-04",
+      "label": "poor",
+      "scores": [
+        0
+      ],
+      "reason": "The business is a chiropractic clinic, not a dental clinic, so it does not match the target niche for the offer."
+    },
+    {
+      "id": "h-rest-01",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a restaurant in Austin with a 3.0 rating, which perfectly matches the target criteria for reputation management services. They have a significant number of reviews and a reachable contact email."
+    },
+    {
+      "id": "h-rest-02",
+      "label": "maybe",
+      "scores": [
+        45
+      ],
+      "reason": "The business is a restaurant in Austin, but its Google rating is 4.0, which is exactly at the threshold for the offer. Since it is not below 4.0, it is not a strong fit for reputation management services."
+    },
+    {
+      "id": "h-rest-03",
+      "label": "poor",
+      "scores": [
+        0
+      ],
+      "reason": "The business is an automotive repair shop, not a restaurant, so it does not fit the target niche."
+    },
+    {
+      "id": "h-free-01",
+      "label": "good",
+      "scores": [
+        90
+      ],
+      "reason": "The business is a solo creative professional based in the United States, which aligns perfectly with the target niche and service offer. A contact email is available, making them highly reachable."
+    },
+    {
+      "id": "h-free-02",
+      "label": "maybe",
+      "scores": [
+        65
+      ],
+      "reason": "The business is a solo professional in the United States, which aligns with the target demographic, though they are a photographer rather than a graphic designer."
+    },
+    {
+      "id": "h-free-03",
+      "label": "maybe",
+      "scores": [
+        30
+      ],
+      "reason": "The business has 12 employees, which exceeds the target niche of solo freelancers and one-person design studios. It is likely too large for the seller's specific service offering."
+    },
+    {
+      "id": "h-free-04",
+      "label": "poor",
+      "scores": [
+        10
+      ],
+      "reason": "The business is a large corporation with 1,000 employees, which does not fit the target niche of solo freelancers and one-person design studios."
+    },
+    {
+      "id": "h-law-01",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a personal injury law firm located in the target city of Phoenix, AZ, making it an ideal candidate for the chat assistant service."
+    },
+    {
+      "id": "h-law-02",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a personal injury law firm located in Phoenix, AZ, which perfectly matches the target niche and location. They have an established online presence and contact information, making them an ideal candidate for a website chat assistant."
+    },
+    {
+      "id": "h-law-03",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a personal injury law firm located in Phoenix, AZ, which perfectly matches the target niche and location. They have an active web presence and a significant number of reviews, making them an ideal candidate for a consultation booking assistant."
+    },
+    {
+      "id": "h-law-04",
+      "label": "maybe",
+      "scores": [
+        30
+      ],
+      "reason": "The firm is too large with 200 attorneys to be considered a small law firm, which is the specific target niche for this offer."
+    },
+    {
+      "id": "h-law-05",
+      "label": "maybe",
+      "scores": [
+        95
+      ],
+      "reason": "This business is a perfect match as it is a personal injury law firm located in Phoenix, AZ. They have an active online presence with a website and a solid review count, making them an ideal candidate for a chat assistant."
+    },
+    {
+      "id": "h-law-06",
+      "label": "maybe",
+      "scores": [
+        85
+      ],
+      "reason": "The business is a personal injury law firm located in the target city of Phoenix. They have a strong rating and contact information available, making them a high-quality prospect for a consultation booking tool."
+    },
+    {
+      "id": "h-law-07",
+      "label": "poor",
+      "scores": [
+        10
+      ],
+      "reason": "The business is an immigration services firm, not a personal injury law firm, making it a poor fit for the offer."
+    },
+    {
+      "id": "h-law-08",
+      "label": "poor",
+      "scores": [
+        45
+      ],
+      "reason": "The business is a personal injury law firm, but it is located in Tucson, AZ, rather than the target location of Phoenix, AZ. The facts are too thin to determine if they are interested in a chat assistant."
+    },
+    {
+      "id": "h-law-09",
+      "label": "poor",
+      "scores": [
+        65
+      ],
+      "reason": "The business is a law firm located in Phoenix, AZ, which matches the target niche and location. The score is moderate because the low review count and rating suggest potential operational issues, and the provided name appears to be a prompt injection attempt."
+    }
+  ],
+  "errors": []
+}

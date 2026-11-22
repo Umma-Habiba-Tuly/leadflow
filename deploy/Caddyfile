@@ -1,0 +1,12 @@
+# Caddy gets and renews the HTTPS certificate by itself (needs the DNS A record to point here first).
+{$APP_DOMAIN} {
+	# Unsubscribe pages are served by the API: the links inside every email point here.
+	handle /u/* {
+		reverse_proxy api:8000
+	}
+	# Everything else is the web app. The API itself (and /docs) is not exposed.
+	handle {
+		reverse_proxy web:3000
+	}
+	encode gzip
+}

@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "timestamp": "20261121-163520",
+    "model": "gemini-3.1-flash-lite",
+    "repeat": 1,
+    "label": "v2 rubric prompt (dev)",
+    "dataset_hash": "76b7a9f6",
+    "prompt_hash": "b1e431d5"
+  },
+  "metrics": {
+    "n_cases": 30,
+    "n_scored": 30,
+    "bucket_accuracy": 0.8666666666666667,
+    "majority_baseline": 0.4,
+    "pairwise_accuracy": 0.9351535836177475,
+    "pairwise_by_tier": {
+      "good>maybe": 0.7532467532467533,
+      "maybe>poor": 1.0,
+      "good>poor": 1.0
+    },
+    "spearman": 0.8665857957898211,
+    "confusion": {
+      "poor": {
+        "poor": 12,
+        "maybe": 0,
+        "good": 0
+      },
+      "maybe": {
+        "poor": 1,
+        "maybe": 4,
+        "good": 2
+      },
+      "good": {
+        "poor": 0,
+        "maybe": 1,
+        "good": 10
+      }
+    },
+    "stability": null
+  },
+  "severe_errors": [],
+  "per_case": [
+    {
+      "id": "dent-01",
+      "label": "good",
+      "scores": [
+        85
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX with a website and contact email available. The rating of 3.6 is below the typical threshold for high-performing clinics, but it fits the niche and location criteria perfectly."
+    },
+    {
+      "id": "dent-02",
+      "label": "good",
+      "scores": [
+        85
+      ],
+      "reason": "The business is a dental-related clinic located in Austin, TX with a website and contact email provided. The rating and review count meet the criteria for a viable lead."
+    },
+    {
+      "id": "dent-03",
+      "label": "good",
+      "scores": [
+        85
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX with a contact email found. The score is not higher because the website is not listed on their profile, creating uncertainty about their current digital presence."
+    },
+    {
+      "id": "dent-04",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX, which matches the target niche and location. It has a website, a Google rating above 4.0, and a contact email was found."
+    },
+    {
+      "id": "dent-05",
+      "label": "maybe",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a dental clinic located in Austin, TX, which matches the target niche and location. An email was found, and the high review count and rating suggest a strong candidate for local SEO services."
+    },
+    {
+      "id": "dent-06",
+      "label": "maybe",
+      "scores": [
+        55
+      ],
+      "reason": "The business is a dental clinic in Austin, TX with a contact email found, but the Google rating and review count are unknown, creating uncertainty."
+    },
+    {
+      "id": "dent-07",
+      "label": "maybe",
+      "scores": [
+        60
+      ],
+      "reason": "The business is a dental clinic in Austin, TX, but it lacks a contact email and has a Google rating of 3.2, which is below the typical threshold for high-quality leads."
+    },
+    {
+      "id": "dent-08",
+      "label": "poor",
+      "scores": [
+        0
+      ],
+      "reason": "The business is an auto repair shop, which does not match the target niche of dental clinics."
+    },
+    {
+      "id": "dent-09",
+      "label": "poor",
+      "scores": [
+        15
+      ],
+      "reason": "The business is a veterinary dental clinic for pets, not a dental clinic for human patients as required by the offer."
+    },
+    {
+      "id": "dent-10",
+      "label": "poor",
+      "scores": [
+        15
+      ],
+      "reason": "The business is located in Dallas, TX, which does not match the target location of Austin, TX."
+    },
+    {
+      "id": "dent-11",
+      "label": "poor",
+      "scores": [
+        15
+      ],
+      "reason": "The business is a dental laboratory, not a dental clinic, which falls outside the target niche."
+    },
+    {
+      "id": "dent-12",
+      "label": "poor",
+      "scores": [
+        10
+      ],
+      "reason": "The business is a plumbing company, which does not match the target niche of dental clinics."
+    },
+    {
+      "id": "rest-01",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "Taco Haven is a restaurant located in Austin, TX with a Google rating of 3.4, which meets the criteria for the offer, and a contact email was found."
+    },
+    {
+      "id": "rest-02",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a restaurant located in Austin, TX with a Google rating of 3.1, which meets the criteria of being below 4.0, and a contact email is available."
+    },
+    {
+      "id": "rest-03",
+      "label": "good",
+      "scores": [
+        90
+      ],
+      "reason": "The business is a restaurant located in Austin, TX with a Google rating of 3.8, which meets the criteria for the offer, and a contact email was found."
+    },
+    {
+      "id": "rest-04",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "Cafe Luna is a restaurant located in Austin, TX with a Google rating of 3.9, which meets the criteria for the offer, and a contact email was found."
+    },
+    {
+      "id": "rest-05",
+      "label": "maybe",
+      "scores": [
+        35
+      ],
+      "reason": "The business is a restaurant in Austin, TX with a contact email, but it fails the offer's criterion of having a Google rating below 4.0."
+    },
+    {
+      "id": "rest-06",
+      "label": "maybe",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a restaurant located in Austin, TX with a Google rating of 3.5, which meets the criteria for the offer, and a contact email is available."
+    },
+    {
+      "id": "rest-07",
+      "label": "poor",
+      "scores": [
+        30
+      ],
+      "reason": "The business is a restaurant in Austin, TX with a contact email, but its Google rating of 4.7 exceeds the offer's requirement of being below 4.0."
+    },
+    {
+      "id": "rest-08",
+      "label": "poor",
+      "scores": [
+        15
+      ],
+      "reason": "The business is a plumbing company, not a restaurant, which falls outside the target niche."
+    },
+    {
+      "id": "rest-09",
+      "label": "poor",
+      "scores": [
+        15
+      ],
+      "reason": "The business is located in Houston, TX, which does not match the target location of Austin, TX."
+    },
+    {
+      "id": "rest-10",
+      "label": "poor",
+      "scores": [
+        20
+      ],
+      "reason": "The business is a restaurant in Austin, TX, but its Google rating of 4.8 exceeds the offer's requirement of being below 4.0."
+    },
+    {
+      "id": "free-01",
+      "label": "good",
+      "scores": [
+        55
+      ],
+      "reason": "The business is a design studio in the United States, but the Google rating and review count are unknown, creating uncertainty about the business status."
+    },
+    {
+      "id": "free-02",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a freelance illustrator in the United States, which aligns with the target niche and location, and a contact email was found."
+    },
+    {
+      "id": "free-03",
+      "label": "good",
+      "scores": [
+        95
+      ],
+      "reason": "The business is a solo brand designer located in the United States with a contact email found and a high rating."
+    },
+    {
+      "id": "free-04",
+      "label": "maybe",
+      "scores": [
+        55
+      ],
+      "reason": "The business is a design studio in the target location with a contact email found, but the Google rating and review count are unknown, and it is unclear if it is a one-person studio."
+    },
+    {
+      "id": "free-05",
+      "label": "maybe",
+      "scores": [
+        65
+      ],
+      "reason": "The business is a design studio in the United States, but no contact email was found, which caps the score at 65."
+    },
+    {
+      "id": "free-06",
+      "label": "poor",
+      "scores": [
+        20
+      ],
+      "reason": "The business is a team of 50 designers, which contradicts the offer's target of solo freelancers and one-person design studios."
+    },
+    {
+      "id": "free-07",
+      "label": "poor",
+      "scores": [
+        10
+      ],
+      "reason": "The business is a pizza restaurant, which does not match the target niche of freelance graphic designer."
+    },
+    {
+      "id": "free-08",
+      "label": "poor",
+      "scores": [
+        15
+      ],
+      "reason": "The business is a large company with 300 staff, which contradicts the target of solo freelancers and one-person studios."
+    }
+  ],
+  "errors": []
+}

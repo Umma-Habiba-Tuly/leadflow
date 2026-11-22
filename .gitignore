@@ -1,0 +1,18 @@
+.env
+*.db
+__pycache__/
+.venv/
+.pytest_cache/
+node_modules/
+
+# secrets: ignore every .env variant, keep the examples
+.env.*
+!.env.example
+!.env.production.example
+*.pem
+*.key
+leadflow_vps*
+.DS_Store
+.next/
+.next-e2e/
+test-results/

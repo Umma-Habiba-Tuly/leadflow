@@ -1,0 +1,63 @@
+# Production stack: Caddy (HTTPS) -> web (Next.js) / api (FastAPI) -> db (Postgres).
+# Only Caddy publishes ports. The database and the API are never reachable from the internet.
+#
+# Run from the repo root:  docker compose --env-file deploy/.env.production -f deploy/docker-compose.prod.yml up -d --build
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: leadflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: leadflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U leadflow"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ../backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://leadflow:${POSTGRES_PASSWORD}@db:5432/leadflow
+      SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:?set ENCRYPTION_KEY}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GOOGLE_PLACES_API_KEY: ${GOOGLE_PLACES_API_KEY:-}
+      PUBLIC_BASE_URL: https://${APP_DOMAIN:?set APP_DOMAIN}
+      ALLOW_PRIVATE_SMTP: "false"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ../frontend
+    restart: unless-stopped
+    environment:
+      BACKEND_URL: http://api:8000
+    depends_on:
+      - api
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+      - api
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:
